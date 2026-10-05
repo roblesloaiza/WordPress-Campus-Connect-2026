@@ -1,0 +1,83 @@
+/* ==========================================
+   WP CAMPUS CONNECT SAN JOSÉ 2026
+   ========================================== */
+
+:root {
+    --wpcc-blue: #3858e9;
+    --wpcc-blue-light: #8ed1fc;
+    --wpcc-purple: #7b61ff;
+    --wpcc-pink: #cf2e8b;
+
+    --wpcc-dark: #10152b;
+    --wpcc-text: #1d2238;
+    --wpcc-muted: #62687c;
+
+    --wpcc-white: #ffffff;
+    --wpcc-offwhite: #f7f7fa;
+
+    --wpcc-radius: 24px;
+    --wpcc-max: 1200px;
+}
+
+/* Base */
+
+.wpcc-section {
+    padding: clamp(72px, 9vw, 130px) 24px;
+}
+
+.wpcc-container {
+    max-width: var(--wpcc-max);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wpcc-section h2 {
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    line-height: .95;
+    letter-spacing: -0.055em;
+    margin-top: 0;
+}
+
+.wpcc-section p {
+    line-height: 1.7;
+}
+
+.wpcc-eyebrow {
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+/* Botones */
+
+.wpcc-button .wp-block-button__link {
+    border-radius: 100px;
+    padding: 15px 25px;
+    font-weight: 650;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.wpcc-button .wp-block-button__link:hover {
+    transform: translateY(-2px);
+}
+
+/* Texto destacado */
+
+.wpcc-lead {
+    font-size: clamp(1.25rem, 2vw, 1.65rem);
+    line-height: 1.55;
+    max-width: 760px;
+}
+
+/* Responsive */
+
+@media (max-width: 781px) {
+    .wpcc-section {
+        padding: 64px 20px;
+    }
+
+    .wpcc-section h2 {
+        letter-spacing: -0.04em;
+    }
+}
