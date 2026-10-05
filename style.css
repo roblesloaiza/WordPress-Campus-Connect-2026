@@ -1,293 +1,475 @@
-/* =========================================================
-   WP CAMPUS CONNECT 2026 — HERO
-   Versión corregida para Gutenberg / events.wordpress.org
-   ========================================================= */
+/* ============================================================
+   WP CAMPUS CONNECT FIDÉLITAS 2026
+   HERO AISLADO PARA EVENTS.WORDPRESS.ORG
+   ============================================================ */
 
-.wpcc-hero {
-    --wpcc-blue: #3858e9;
-    --wpcc-purple: #7656d6;
-    --wpcc-pink: #d52b83;
-    --wpcc-dark: #15182a;
-    --wpcc-text: #303346;
-    --wpcc-light: #f8f7f4;
-    --wpcc-white: #ffffff;
 
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
+/* ------------------------------------------------------------
+   RESET LOCAL
+   Nada fuera de #wpcc26-hero será afectado.
+   ------------------------------------------------------------ */
 
-    background: var(--wpcc-light) !important;
-    color: var(--wpcc-dark) !important;
-
-    padding: clamp(60px, 6vw, 95px) 30px;
-}
-
-.wpcc-hero *,
-.wpcc-hero *::before,
-.wpcc-hero *::after {
-    box-sizing: border-box;
+#wpcc26-hero,
+#wpcc26-hero *,
+#wpcc26-hero *::before,
+#wpcc26-hero *::after {
+    box-sizing: border-box !important;
 }
 
 
-/* =========================================================
+/* ------------------------------------------------------------
+   HERO
+   ------------------------------------------------------------ */
+
+#wpcc26-hero {
+    --wpcc26-ink: #172033;
+    --wpcc26-blue: #3858e9;
+    --wpcc26-sky: #dce6ff;
+    --wpcc26-paper: #f7f5ef;
+    --wpcc26-white: #ffffff;
+    --wpcc26-purple: #7c3aed;
+    --wpcc26-magenta: #d9468f;
+
+    position: relative !important;
+
+    width: 100vw !important;
+    max-width: none !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+
+    padding:
+        clamp(55px, 5vw, 85px)
+        clamp(24px, 4vw, 70px) !important;
+
+    overflow: hidden !important;
+
+    background: var(--wpcc26-paper) !important;
+
+    color: var(--wpcc26-ink) !important;
+
+    min-height: 0 !important;
+}
+
+
+/* ------------------------------------------------------------
    CONTENEDOR
-   ========================================================= */
+   ------------------------------------------------------------ */
 
-.wpcc-hero .wpcc-hero__container {
-    width: 100%;
-    max-width: 1480px;
+#wpcc26-hero .wpcc26-hero-inner {
+    position: relative !important;
 
-    margin: 0 auto;
+    width: 100% !important;
+    max-width: 1450px !important;
 
-    display: grid;
-    grid-template-columns:
-        minmax(0, 0.95fr)
-        minmax(460px, 1.05fr);
-
-    align-items: center;
-
-    gap: clamp(60px, 7vw, 120px);
-}
-
-
-/* =========================================================
-   COLUMNA DE TEXTO
-   ========================================================= */
-
-.wpcc-hero .wpcc-hero__content {
-    position: relative;
-    z-index: 10;
-
-    min-width: 0;
-}
-
-
-/* Etiqueta superior */
-
-.wpcc-hero .wpcc-hero__eyebrow {
-    margin: 0 0 22px !important;
-
+    margin: 0 auto !important;
     padding: 0 !important;
 
-    color: var(--wpcc-blue) !important;
+    display: grid !important;
 
-    font-size: 13px !important;
-    font-weight: 700 !important;
-    line-height: 1.3 !important;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(440px, 0.9fr) !important;
 
-    letter-spacing: 0.13em !important;
-    text-transform: uppercase !important;
+    gap: clamp(55px, 7vw, 115px) !important;
+
+    align-items: center !important;
 }
 
 
-/* =========================================================
-   TÍTULO
-   ========================================================= */
+/* ------------------------------------------------------------
+   TEXTO
+   ------------------------------------------------------------ */
 
-.wpcc-hero .wpcc-hero__title {
+#wpcc26-hero .wpcc26-hero-copy {
+    position: relative !important;
+    z-index: 5 !important;
+
+    width: 100% !important;
+
     margin: 0 !important;
     padding: 0 !important;
 
-    color: var(--wpcc-dark) !important;
+    color: var(--wpcc26-ink) !important;
+}
 
-    font-size: clamp(72px, 7.2vw, 128px) !important;
+
+/* KICKER */
+
+#wpcc26-hero .wpcc26-kicker {
+    display: block !important;
+
+    margin: 0 0 22px !important;
+    padding: 0 !important;
+
+    color: var(--wpcc26-ink) !important;
+
+    opacity: 1 !important;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif !important;
+
+    font-size: 12px !important;
+    font-style: normal !important;
     font-weight: 800 !important;
 
-    line-height: 0.78 !important;
+    line-height: 1.4 !important;
 
-    letter-spacing: -0.065em !important;
+    letter-spacing: .14em !important;
+
+    text-transform: uppercase !important;
+
+    visibility: visible !important;
+}
+
+
+/* ------------------------------------------------------------
+   TÍTULO
+   ------------------------------------------------------------ */
+
+#wpcc26-hero .wpcc26-title {
+    display: block !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: var(--wpcc26-ink) !important;
+
+    opacity: 1 !important;
+
+    line-height: 1 !important;
+
+    visibility: visible !important;
+}
+
+
+#wpcc26-hero .wpcc26-title-main {
+    display: block !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: var(--wpcc26-ink) !important;
+
+    opacity: 1 !important;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif !important;
+
+    font-size: clamp(78px, 8.2vw, 138px) !important;
+    font-style: normal !important;
+    font-weight: 900 !important;
+
+    line-height: .76 !important;
+
+    letter-spacing: -.075em !important;
 
     text-transform: none !important;
+
+    visibility: visible !important;
 }
 
 
-.wpcc-hero .wpcc-hero__title-main {
-    display: block;
+#wpcc26-hero .wpcc26-title-script {
+    display: block !important;
 
-    color: var(--wpcc-dark) !important;
+    margin:
+        clamp(9px, 1vw, 15px)
+        0
+        0 !important;
 
-    font-weight: 800 !important;
-}
-
-
-.wpcc-hero .wpcc-hero__title-secondary {
-    display: block;
-
-    margin-top: 0.12em;
-
-    color: var(--wpcc-purple) !important;
-
-    font-weight: 500 !important;
-    font-style: italic !important;
-
-    letter-spacing: -0.055em !important;
-}
-
-
-/* =========================================================
-   FECHA
-   ========================================================= */
-
-.wpcc-hero .wpcc-hero__date {
-    display: block;
-
-    width: fit-content;
-    max-width: 100%;
-
-    margin: 46px 0 22px !important;
-
-    padding: 14px 0 0 !important;
-
-    border-top: 2px solid var(--wpcc-dark);
-
-    color: var(--wpcc-dark) !important;
-
-    font-size: 14px !important;
-    font-weight: 750 !important;
-
-    line-height: 1.5 !important;
-
-    letter-spacing: 0.07em !important;
-
-    text-transform: uppercase !important;
-}
-
-
-/* =========================================================
-   DESCRIPCIÓN
-   ========================================================= */
-
-.wpcc-hero .wpcc-hero__description {
-    max-width: 600px;
-
-    margin: 0 !important;
     padding: 0 !important;
 
-    color: var(--wpcc-text) !important;
+    color: var(--wpcc26-blue) !important;
 
-    font-size: clamp(17px, 1.25vw, 21px) !important;
+    opacity: 1 !important;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif !important;
+
+    font-size: clamp(66px, 7.2vw, 120px) !important;
+    font-style: italic !important;
     font-weight: 400 !important;
 
-    line-height: 1.65 !important;
+    line-height: .84 !important;
+
+    letter-spacing: -.06em !important;
+
+    text-transform: none !important;
+
+    visibility: visible !important;
 }
 
 
-/* =========================================================
-   BOTONES
-   ========================================================= */
+/* ------------------------------------------------------------
+   DESCRIPCIÓN
+   ------------------------------------------------------------ */
 
-.wpcc-hero .wpcc-hero__actions {
-    display: flex;
-    flex-wrap: wrap;
+#wpcc26-hero .wpcc26-description {
+    display: block !important;
 
-    gap: 12px;
+    width: 100% !important;
+    max-width: 620px !important;
 
-    margin-top: 30px;
+    margin: 40px 0 0 !important;
+    padding: 0 !important;
+
+    color: var(--wpcc26-ink) !important;
+
+    opacity: 1 !important;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif !important;
+
+    font-size: clamp(18px, 1.4vw, 22px) !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+
+    line-height: 1.55 !important;
+
+    letter-spacing: 0 !important;
+
+    visibility: visible !important;
 }
 
 
-.wpcc-hero .wpcc-hero__button {
-    display: inline-flex;
+/* ------------------------------------------------------------
+   DATOS
+   ------------------------------------------------------------ */
 
-    min-height: 50px;
+#wpcc26-hero .wpcc26-meta {
+    display: flex !important;
+    flex-wrap: wrap !important;
 
-    align-items: center;
-    justify-content: center;
+    gap: 9px !important;
 
-    padding: 13px 24px !important;
+    margin: 28px 0 0 !important;
+    padding: 0 !important;
 
-    border: 2px solid var(--wpcc-dark) !important;
+    opacity: 1 !important;
+
+    visibility: visible !important;
+}
+
+
+#wpcc26-hero .wpcc26-meta span {
+    display: inline-flex !important;
+
+    align-items: center !important;
+
+    min-height: 34px !important;
+
+    margin: 0 !important;
+
+    padding: 6px 12px !important;
+
+    background: var(--wpcc26-white) !important;
+
+    border:
+        1px
+        solid
+        var(--wpcc26-ink) !important;
+
     border-radius: 999px !important;
 
-    font-size: 15px !important;
+    color: var(--wpcc26-ink) !important;
+
+    opacity: 1 !important;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif !important;
+
+    font-size: 13px !important;
+    font-style: normal !important;
     font-weight: 700 !important;
 
     line-height: 1 !important;
 
-    text-decoration: none !important;
+    text-transform: none !important;
 
-    box-shadow: none !important;
+    visibility: visible !important;
+}
+
+
+/* ------------------------------------------------------------
+   BOTONES
+   ------------------------------------------------------------ */
+
+#wpcc26-hero .wpcc26-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+
+    gap: 12px !important;
+
+    margin: 30px 0 0 !important;
+    padding: 0 !important;
+}
+
+
+#wpcc26-hero .wpcc26-btn {
+    display: inline-flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 12px !important;
+
+    min-height: 51px !important;
+
+    margin: 0 !important;
+
+    padding: 13px 21px !important;
+
+    border:
+        1.5px
+        solid
+        var(--wpcc26-ink) !important;
+
+    border-radius: 999px !important;
+
+    color: var(--wpcc26-ink) !important;
+
+    opacity: 1 !important;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif !important;
+
+    font-size: 15px !important;
+    font-style: normal !important;
+    font-weight: 750 !important;
+
+    line-height: 1 !important;
+
+    text-decoration: none !important;
+    text-transform: none !important;
+
+    box-shadow:
+        3px
+        3px
+        0
+        var(--wpcc26-ink) !important;
+
+    visibility: visible !important;
 
     transition:
-        transform 180ms ease,
-        background-color 180ms ease,
-        color 180ms ease;
+        transform .18s ease,
+        box-shadow .18s ease !important;
 }
 
 
-.wpcc-hero .wpcc-hero__button--primary {
-    background: var(--wpcc-dark) !important;
-    color: var(--wpcc-white) !important;
+#wpcc26-hero .wpcc26-btn-primary {
+    background: var(--wpcc26-magenta) !important;
+
+    color: var(--wpcc26-ink) !important;
 }
 
 
-.wpcc-hero .wpcc-hero__button--secondary {
-    background: transparent !important;
-    color: var(--wpcc-dark) !important;
+#wpcc26-hero .wpcc26-btn-secondary {
+    background: var(--wpcc26-white) !important;
+
+    color: var(--wpcc26-ink) !important;
 }
 
 
-.wpcc-hero .wpcc-hero__button:hover {
-    transform: translateY(-2px);
+#wpcc26-hero .wpcc26-btn:hover {
+    transform: translate(-2px, -2px) !important;
+
+    box-shadow:
+        5px
+        5px
+        0
+        var(--wpcc26-ink) !important;
 }
 
 
-.wpcc-hero .wpcc-hero__button--secondary:hover {
-    background: var(--wpcc-dark) !important;
-    color: var(--wpcc-white) !important;
+/* ============================================================
+   VISUAL
+   ============================================================ */
+
+#wpcc26-hero .wpcc26-visual {
+    position: relative !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    padding:
+        35px
+        35px
+        42px !important;
+
+    isolation: isolate !important;
 }
 
 
-/* =========================================================
-   COLUMNA DE IMAGEN
-   ========================================================= */
-
-.wpcc-hero .wpcc-hero__visual {
-    position: relative;
-
-    width: 100%;
-    min-width: 0;
-
-    padding: 30px 35px 40px;
-
-    isolation: isolate;
-}
-
-
-/* =========================================================
+/* ------------------------------------------------------------
    FOTO
-   ========================================================= */
+   ------------------------------------------------------------ */
 
-.wpcc-hero .wpcc-hero__figure {
-    position: relative;
+#wpcc26-hero .wpcc26-photo {
+    position: relative !important;
+    z-index: 3 !important;
 
-    z-index: 3;
+    display: block !important;
 
-    width: 100%;
+    width: 100% !important;
 
-    /*
-     * MÁS HORIZONTAL.
-     * Esta foto funciona mucho mejor así.
-     */
-    aspect-ratio: 1.08 / 1;
+    aspect-ratio: 1.18 / 1 !important;
 
     margin: 0 !important;
     padding: 0 !important;
 
-    overflow: hidden;
+    overflow: hidden !important;
 
-    background: #e7e7ed;
+    background: var(--wpcc26-sky) !important;
+
+    border:
+        2px
+        solid
+        var(--wpcc26-ink) !important;
 
     border-radius:
-        46% 54% 45% 55% /
-        40% 45% 55% 60%;
+        6px
+        80px
+        6px
+        80px !important;
 
-    transform: rotate(-1deg);
+    box-shadow:
+        13px
+        13px
+        0
+        var(--wpcc26-blue) !important;
+
+    transform: rotate(1.5deg) !important;
 }
 
 
-.wpcc-hero .wpcc-hero__image {
+#wpcc26-hero .wpcc26-photo img {
     display: block !important;
 
     width: 100% !important;
@@ -296,363 +478,413 @@
     max-width: none !important;
 
     margin: 0 !important;
+    padding: 0 !important;
 
     object-fit: cover !important;
+    object-position: center center !important;
 
-    /*
-     * Ajustado específicamente para IMG_6115
-     */
-    object-position: 53% 50% !important;
+    opacity: 1 !important;
 
-    transform: scale(1.02);
-
-    transition: transform 600ms ease;
+    visibility: visible !important;
 }
 
 
-.wpcc-hero .wpcc-hero__figure:hover .wpcc-hero__image {
-    transform: scale(1.05);
+/* ------------------------------------------------------------
+   FORMAS
+   ------------------------------------------------------------ */
+
+#wpcc26-hero .wpcc26-shape {
+    position: absolute !important;
+
+    display: block !important;
+
+    opacity: 1 !important;
+
+    pointer-events: none !important;
+
+    visibility: visible !important;
 }
 
 
-/* =========================================================
-   FORMAS DETRÁS DE LA FOTO
-   ========================================================= */
+/* Morado */
 
-.wpcc-hero .wpcc-hero__shape {
-    position: absolute;
+#wpcc26-hero .wpcc26-shape-purple {
+    z-index: 1 !important;
 
-    display: block;
+    width: 230px !important;
+    height: 230px !important;
 
-    pointer-events: none;
+    top: 0 !important;
+    right: -5px !important;
+
+    background: var(--wpcc26-purple) !important;
+
+    border-radius: 50% !important;
 }
 
 
-.wpcc-hero .wpcc-hero__shape--purple {
-    z-index: 1;
+/* Azul claro */
 
-    width: 70%;
-    height: 78%;
+#wpcc26-hero .wpcc26-shape-sky {
+    z-index: 1 !important;
 
-    top: 1%;
-    right: -1%;
+    width: 55% !important;
+    height: 65% !important;
 
-    background: var(--wpcc-purple) !important;
+    left: 0 !important;
+    bottom: 0 !important;
+
+    background: var(--wpcc26-sky) !important;
 
     border-radius:
-        42% 58% 64% 36% /
-        40% 38% 62% 60%;
+        80px
+        8px
+        80px
+        8px !important;
 
-    transform: rotate(6deg);
+    transform: rotate(-4deg) !important;
 }
 
 
-.wpcc-hero .wpcc-hero__shape--pink {
-    z-index: 2;
+/* Magenta */
 
-    width: 42%;
-    height: 38%;
+#wpcc26-hero .wpcc26-shape-magenta {
+    z-index: 4 !important;
 
-    left: -1%;
-    bottom: 0;
+    width: 34px !important;
+    height: 34px !important;
 
-    background: var(--wpcc-pink) !important;
+    left: 17px !important;
+    top: 70px !important;
 
-    border-radius:
-        62% 38% 48% 52% /
-        45% 58% 42% 55%;
+    background: var(--wpcc26-magenta) !important;
 
-    transform: rotate(-7deg);
+    border:
+        2px
+        solid
+        var(--wpcc26-ink) !important;
+
+    border-radius: 50% !important;
 }
 
 
-.wpcc-hero .wpcc-hero__shape--blue {
-    z-index: 5;
+/* ------------------------------------------------------------
+   STICKER
+   ------------------------------------------------------------ */
 
-    width: 78px;
-    height: 78px;
+#wpcc26-hero .wpcc26-sticker {
+    position: absolute !important;
+    z-index: 5 !important;
 
-    left: 1%;
-    top: 5%;
+    right: 3px !important;
+    bottom: 9% !important;
 
-    background: var(--wpcc-blue) !important;
+    display: inline-flex !important;
 
-    border-radius: 50%;
-}
+    align-items: center !important;
 
+    gap: 8px !important;
 
-/* =========================================================
-   ETIQUETA FOTO
-   ========================================================= */
+    padding: 8px 13px 8px 8px !important;
 
-.wpcc-hero .wpcc-hero__photo-label {
-    position: absolute;
+    background: var(--wpcc26-white) !important;
 
-    z-index: 6;
+    border:
+        1.5px
+        solid
+        var(--wpcc26-ink) !important;
 
-    right: 0;
-    bottom: 9%;
+    border-radius: 999px !important;
 
-    display: flex;
+    color: var(--wpcc26-ink) !important;
 
-    align-items: center;
+    opacity: 1 !important;
 
-    gap: 8px;
-
-    padding: 8px 14px 8px 8px;
-
-    background: white !important;
-
-    border: 2px solid var(--wpcc-dark) !important;
-    border-radius: 999px;
-
-    color: var(--wpcc-dark) !important;
-
-    font-size: 11px !important;
+    font-size: 10px !important;
     font-weight: 800 !important;
 
     line-height: 1 !important;
 
-    letter-spacing: 0.07em !important;
+    letter-spacing: .09em !important;
 
-    white-space: nowrap;
+    transform: rotate(-3deg) !important;
 
-    transform: rotate(2deg);
+    visibility: visible !important;
 }
 
 
-.wpcc-hero .wpcc-hero__photo-label span {
-    display: inline-flex;
+#wpcc26-hero .wpcc26-sticker-dot {
+    display: block !important;
 
-    width: 32px;
-    height: 32px;
+    width: 24px !important;
+    height: 24px !important;
 
-    align-items: center;
-    justify-content: center;
+    background: var(--wpcc26-blue) !important;
 
-    background: var(--wpcc-blue) !important;
-
-    border-radius: 50%;
-
-    color: white !important;
-
-    font-size: 10px !important;
+    border-radius: 50% !important;
 }
 
 
-/* =========================================================
-   TABLET HORIZONTAL / LAPTOP PEQUEÑA
-   ========================================================= */
+/* ------------------------------------------------------------
+   TEXTO DECORATIVO
+   ------------------------------------------------------------ */
 
-@media (max-width: 1100px) {
+#wpcc26-hero .wpcc26-small-note {
+    position: absolute !important;
+    z-index: 5 !important;
 
-    .wpcc-hero {
-        padding: 65px 28px;
+    left: 12px !important;
+    bottom: 8px !important;
+
+    color: var(--wpcc26-purple) !important;
+
+    opacity: 1 !important;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif !important;
+
+    font-size: 18px !important;
+    font-style: italic !important;
+
+    transform: rotate(-5deg) !important;
+
+    visibility: visible !important;
+}
+
+
+/* ============================================================
+   TABLET / LAPTOP PEQUEÑO
+   ============================================================ */
+
+@media (max-width: 1050px) {
+
+    #wpcc26-hero {
+        padding:
+            55px
+            28px !important;
     }
 
-    .wpcc-hero .wpcc-hero__container {
+    #wpcc26-hero .wpcc26-hero-inner {
         grid-template-columns:
             minmax(0, 1fr)
-            minmax(390px, 0.9fr);
+            minmax(360px, .85fr) !important;
 
-        gap: 45px;
+        gap: 45px !important;
     }
 
-    .wpcc-hero .wpcc-hero__title {
-        font-size: clamp(68px, 8vw, 96px) !important;
+    #wpcc26-hero .wpcc26-title-main {
+        font-size:
+            clamp(
+                70px,
+                8.5vw,
+                100px
+            ) !important;
+    }
+
+    #wpcc26-hero .wpcc26-title-script {
+        font-size:
+            clamp(
+                61px,
+                7.5vw,
+                90px
+            ) !important;
     }
 
 }
 
 
-/* =========================================================
+/* ============================================================
    TABLET VERTICAL
-   ========================================================= */
+   ============================================================ */
 
-@media (max-width: 850px) {
+@media (max-width: 800px) {
 
-    .wpcc-hero {
+    #wpcc26-hero {
         padding:
-            65px
-            30px
-            75px;
+            55px
+            28px
+            70px !important;
     }
 
-    .wpcc-hero .wpcc-hero__container {
-        grid-template-columns: 1fr;
+    #wpcc26-hero .wpcc26-hero-inner {
+        grid-template-columns: 1fr !important;
 
-        gap: 55px;
+        gap: 55px !important;
     }
 
-    .wpcc-hero .wpcc-hero__content {
-        max-width: 720px;
+    #wpcc26-hero .wpcc26-hero-copy {
+        max-width: 700px !important;
     }
 
-    .wpcc-hero .wpcc-hero__title {
-        font-size: clamp(78px, 14vw, 115px) !important;
+    #wpcc26-hero .wpcc26-title-main {
+        font-size:
+            clamp(
+                80px,
+                15vw,
+                120px
+            ) !important;
     }
 
-    .wpcc-hero .wpcc-hero__description {
-        max-width: 650px;
+    #wpcc26-hero .wpcc26-title-script {
+        font-size:
+            clamp(
+                70px,
+                13vw,
+                105px
+            ) !important;
     }
 
-    .wpcc-hero .wpcc-hero__visual {
-        width: min(100%, 700px);
+    #wpcc26-hero .wpcc26-visual {
+        width: min(100%, 700px) !important;
 
-        margin: 0 auto;
-
-        padding: 30px 35px 45px;
-    }
-
-    .wpcc-hero .wpcc-hero__figure {
-        aspect-ratio: 1.25 / 1;
+        margin:
+            0
+            auto !important;
     }
 
 }
 
 
-/* =========================================================
+/* ============================================================
    MÓVIL
-   ========================================================= */
+   ============================================================ */
 
 @media (max-width: 600px) {
 
-    .wpcc-hero {
+    #wpcc26-hero {
         padding:
-            48px
+            44px
             18px
-            60px;
+            58px !important;
     }
 
-    .wpcc-hero .wpcc-hero__container {
-        gap: 42px;
+    #wpcc26-hero .wpcc26-hero-inner {
+        gap: 45px !important;
     }
 
-    .wpcc-hero .wpcc-hero__eyebrow {
-        margin-bottom: 18px !important;
+    #wpcc26-hero .wpcc26-kicker {
+        margin-bottom: 16px !important;
 
+        font-size: 10px !important;
+
+        letter-spacing: .11em !important;
+    }
+
+    #wpcc26-hero .wpcc26-title-main {
+        font-size:
+            clamp(
+                65px,
+                20vw,
+                90px
+            ) !important;
+    }
+
+    #wpcc26-hero .wpcc26-title-script {
+        font-size:
+            clamp(
+                56px,
+                17vw,
+                78px
+            ) !important;
+    }
+
+    #wpcc26-hero .wpcc26-description {
+        margin-top: 30px !important;
+
+        font-size: 16px !important;
+    }
+
+    #wpcc26-hero .wpcc26-meta {
+        gap: 7px !important;
+
+        margin-top: 23px !important;
+    }
+
+    #wpcc26-hero .wpcc26-meta span {
         font-size: 11px !important;
     }
 
-    .wpcc-hero .wpcc-hero__title {
-        font-size: clamp(61px, 19vw, 90px) !important;
+    #wpcc26-hero .wpcc26-actions {
+        flex-direction: column !important;
 
-        line-height: 0.8 !important;
+        width: 100% !important;
     }
 
-    .wpcc-hero .wpcc-hero__date {
-        width: 100%;
-
-        margin-top: 34px !important;
-
-        font-size: 12px !important;
-
-        line-height: 1.55 !important;
+    #wpcc26-hero .wpcc26-btn {
+        width: 100% !important;
     }
 
-    .wpcc-hero .wpcc-hero__description {
-        font-size: 16px !important;
-
-        line-height: 1.65 !important;
-    }
-
-    .wpcc-hero .wpcc-hero__actions {
-        width: 100%;
-
-        flex-direction: column;
-
-        margin-top: 26px;
-    }
-
-    .wpcc-hero .wpcc-hero__button {
-        width: 100%;
-
-        min-height: 52px;
-    }
-
-    .wpcc-hero .wpcc-hero__visual {
-        width: 100%;
-
+    #wpcc26-hero .wpcc26-visual {
         padding:
-            20px
-            17px
-            36px;
+            22px
+            18px
+            36px !important;
     }
 
-    .wpcc-hero .wpcc-hero__figure {
-        /*
-         * En teléfono dejamos algo más vertical.
-         */
-        aspect-ratio: 4 / 5;
+    #wpcc26-hero .wpcc26-photo {
+        aspect-ratio: 4 / 5 !important;
 
         border-radius:
-            42% 58% 46% 54% /
-            40% 44% 56% 60%;
+            5px
+            55px
+            5px
+            55px !important;
+
+        box-shadow:
+            9px
+            9px
+            0
+            var(--wpcc26-blue) !important;
     }
 
-    .wpcc-hero .wpcc-hero__image {
-        object-position: 54% center !important;
+    #wpcc26-hero .wpcc26-shape-purple {
+        width: 150px !important;
+        height: 150px !important;
     }
 
-    .wpcc-hero .wpcc-hero__shape--purple {
-        width: 78%;
-        height: 75%;
-
-        right: -2%;
+    #wpcc26-hero .wpcc26-shape-sky {
+        width: 65% !important;
     }
 
-    .wpcc-hero .wpcc-hero__shape--pink {
-        width: 50%;
-        height: 36%;
-    }
-
-    .wpcc-hero .wpcc-hero__shape--blue {
-        width: 55px;
-        height: 55px;
-    }
-
-    .wpcc-hero .wpcc-hero__photo-label {
-        right: 0;
-        bottom: 7%;
-
-        font-size: 9px !important;
+    #wpcc26-hero .wpcc26-small-note {
+        font-size: 15px !important;
     }
 
 }
 
 
-/* =========================================================
-   MÓVIL MUY PEQUEÑO
-   ========================================================= */
+/* ============================================================
+   MÓVILES PEQUEÑOS
+   ============================================================ */
 
 @media (max-width: 380px) {
 
-    .wpcc-hero {
-        padding-left: 15px;
-        padding-right: 15px;
+    #wpcc26-hero {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
     }
 
-    .wpcc-hero .wpcc-hero__title {
-        font-size: 58px !important;
+    #wpcc26-hero .wpcc26-title-main {
+        font-size: 61px !important;
+    }
+
+    #wpcc26-hero .wpcc26-title-script {
+        font-size: 52px !important;
     }
 
 }
 
 
-/* =========================================================
-   ACCESIBILIDAD
-   ========================================================= */
+/* ============================================================
+   REDUCIR MOVIMIENTO
+   ============================================================ */
 
 @media (prefers-reduced-motion: reduce) {
 
-    .wpcc-hero .wpcc-hero__button,
-    .wpcc-hero .wpcc-hero__image {
-        transition: none;
-    }
-
-    .wpcc-hero .wpcc-hero__button:hover,
-    .wpcc-hero .wpcc-hero__figure:hover .wpcc-hero__image {
-        transform: none;
+    #wpcc26-hero .wpcc26-btn {
+        transition: none !important;
     }
 
 }
