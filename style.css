@@ -262,3 +262,83 @@
 @media (prefers-reduced-motion:reduce) {
   #wpcc26-site .wpcc26-btn { transition:none; }
 }
+
+
+/* ==========================================================
+   FIX DEFINITIVO — FULL BLEED / FONDOS DE MARCA
+   PEGAR AL FINAL DEL CSS
+   ========================================================== */
+
+/* El contenedor principal debe poder desbordar el ancho del theme */
+#wpcc26-site {
+  overflow-x: clip;
+}
+
+/* Secciones que deben tocar ambos bordes de la pantalla */
+#wpcc26-site .wpcc26-ticker,
+#wpcc26-site .wpcc26-story,
+#wpcc26-site .wpcc26-support,
+#wpcc26-site .wpcc26-final {
+  position: relative !important;
+
+  width: 100vw !important;
+  max-width: 100vw !important;
+
+  left: 50% !important;
+  right: 50% !important;
+
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+}
+
+/* Forzar los fondos oficiales */
+#wpcc26-site .wpcc26-ticker {
+  background-color: var(--blue) !important;
+  color: #ffffff !important;
+}
+
+#wpcc26-site .wpcc26-story {
+  background-color: var(--purple) !important;
+  color: #ffffff !important;
+}
+
+#wpcc26-site .wpcc26-support {
+  background-color: var(--dark) !important;
+  color: #ffffff !important;
+}
+
+#wpcc26-site .wpcc26-final {
+  background-color: var(--blue) !important;
+  color: #ffffff !important;
+}
+
+/* Asegurar que el contenido quede por encima del fondo */
+#wpcc26-site .wpcc26-story > *,
+#wpcc26-site .wpcc26-support > *,
+#wpcc26-site .wpcc26-final > *,
+#wpcc26-site .wpcc26-ticker > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mantener el ancho correcto del contenido interno */
+#wpcc26-site .wpcc26-support .wpcc26-wrap,
+#wpcc26-site .wpcc26-final .wpcc26-wrap {
+  width: min(100%, var(--max));
+  margin-inline: auto;
+  padding-inline: 28px;
+}
+
+/* El ticker debe verse completo */
+#wpcc26-site .wpcc26-ticker__track {
+  display: block;
+  width: 100%;
+}
+
+/* En móvil, conservar respiración */
+@media (max-width: 560px) {
+  #wpcc26-site .wpcc26-support .wpcc26-wrap,
+  #wpcc26-site .wpcc26-final .wpcc26-wrap {
+    padding-inline: 18px;
+  }
+}
