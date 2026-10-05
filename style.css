@@ -888,3 +888,55 @@
     }
 
 }
+
+/* ===== DEBUG WPCC ===== */
+
+#wpcc26-hero,
+#wpcc26-hero .wpcc26-hero-inner,
+#wpcc26-hero .wpcc26-hero-copy,
+#wpcc26-hero .wpcc26-hero-copy *,
+#wpcc26-hero .wpcc26-title,
+#wpcc26-hero .wpcc26-title *,
+#wpcc26-hero .wpcc26-description,
+#wpcc26-hero .wpcc26-meta,
+#wpcc26-hero .wpcc26-meta *,
+#wpcc26-hero .wpcc26-actions,
+#wpcc26-hero .wpcc26-actions * {
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+}
+
+#wpcc26-hero .wpcc26-hero-copy {
+    color: #172033 !important;
+}
+
+#wpcc26-hero .wpcc26-title-main {
+    color: #172033 !important;
+}
+
+#wpcc26-hero .wpcc26-title-script {
+    color: #3858e9 !important;
+}
+
+#wpcc26-hero .wpcc26-kicker,
+#wpcc26-hero .wpcc26-description {
+    color: #172033 !important;
+}
+
+#wpcc26-hero .wpcc26-meta span {
+    background: #ffffff !important;
+    color: #172033 !important;
+    border-color: #172033 !important;
+}
+
+#wpcc26-hero .wpcc26-btn-primary {
+    background: #d9468f !important;
+    color: #172033 !important;
+}
+
+#wpcc26-hero .wpcc26-btn-secondary {
+    background: #ffffff !important;
+    color: #172033 !important;
+}
