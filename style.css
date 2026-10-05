@@ -1,3 +1,131 @@
+/* ==========================================================
+   WP CAMPUS CONNECT FIDÉLITAS 2026
+   CSS ÚNICO PARA TODA LA LANDING EN GUTENBERG
+   ========================================================== */
+
+#wpcc26-site {
+  --ink:#172033;
+  --blue:#3858e9;
+  --sky:#dce6ff;
+  --paper:#f7f5ef;
+  --white:#fff;
+  --purple:#7c3aed;
+  --pink:#d9468f;
+  --line:#cfd4df;
+  --dark:#14182a;
+  --max:1180px;
+
+  position:relative !important;
+  z-index:5 !important;
+  isolation:isolate;
+  width:100%;
+  max-width:none !important;
+  margin:0 !important;
+  padding:0 !important;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.45;
+  opacity:1 !important;
+  visibility:visible !important;
+  filter:none !important;
+}
+
+#wpcc26-site,
+#wpcc26-site *,
+#wpcc26-site *::before,
+#wpcc26-site *::after { box-sizing:border-box; }
+
+#wpcc26-site section,
+#wpcc26-site div,
+#wpcc26-site p,
+#wpcc26-site h1,
+#wpcc26-site h2,
+#wpcc26-site h3,
+#wpcc26-site a,
+#wpcc26-site figure,
+#wpcc26-site img,
+#wpcc26-site span {
+  opacity:1 !important;
+  visibility:visible !important;
+  filter:none !important;
+  mix-blend-mode:normal !important;
+}
+
+#wpcc26-site a { color:inherit; }
+#wpcc26-site img { display:block; width:100%; height:auto; }
+#wpcc26-site figure { margin:0; }
+#wpcc26-site .wpcc26-wrap { width:min(100%, var(--max)); margin-inline:auto; padding-inline:28px; }
+#wpcc26-site .wpcc26-section { padding:100px 0; position:relative; }
+#wpcc26-site .wpcc26-eyebrow { margin:0; font-size:.78rem; line-height:1.3; letter-spacing:.14em; text-transform:uppercase; font-weight:800; }
+#wpcc26-site .wpcc26-title { margin:0; font-size:clamp(3rem,6vw,6.2rem); line-height:.9; letter-spacing:-.065em; }
+#wpcc26-site .wpcc26-copy-large { font-size:1.15rem; max-width:560px; }
+
+/* Buttons */
+#wpcc26-site .wpcc26-btn {
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  padding:14px 19px; border:1.5px solid var(--ink); border-radius:999px;
+  text-decoration:none; font-weight:750; line-height:1; min-height:50px;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+#wpcc26-site .wpcc26-btn:hover { transform:translate(-2px,-2px); }
+#wpcc26-site .wpcc26-btn--primary { background:var(--pink); box-shadow:3px 3px 0 var(--ink); }
+#wpcc26-site .wpcc26-btn--primary:hover { box-shadow:5px 5px 0 var(--ink); }
+#wpcc26-site .wpcc26-btn--ghost { border-color:transparent; background:transparent; }
+#wpcc26-site .wpcc26-btn--light { background:var(--white); box-shadow:3px 3px 0 var(--ink); }
+
+/* HERO */
+#wpcc26-site .wpcc26-hero {
+  position:relative; overflow:hidden; padding:82px 0 70px;
+  background:var(--paper); border-bottom:1px solid var(--ink);
+}
+#wpcc26-site .wpcc26-hero__grid {
+  display:grid; grid-template-columns:1.05fr .95fr; gap:54px; align-items:center;
+}
+#wpcc26-site .wpcc26-hero__title { margin:22px 0 0; line-height:.78; letter-spacing:-.085em; }
+#wpcc26-site .wpcc26-hero__title span {
+  display:block; font-size:clamp(4.8rem,9vw,8.8rem); font-weight:900; color:var(--ink);
+}
+#wpcc26-site .wpcc26-hero__title em {
+  display:block; margin-top:.12em; color:var(--blue);
+  font-family:Georgia,"Times New Roman",serif; font-size:clamp(4rem,7vw,7rem);
+  font-weight:400; font-style:italic; letter-spacing:-.06em;
+}
+#wpcc26-site .wpcc26-hero__lead { max-width:620px; margin:36px 0 0; font-size:1.2rem; line-height:1.55; }
+#wpcc26-site .wpcc26-meta { display:flex; flex-wrap:wrap; gap:10px 26px; margin-top:28px; font-size:.9rem; font-weight:750; }
+#wpcc26-site .wpcc26-actions { display:flex; flex-wrap:wrap; gap:14px; margin-top:32px; }
+#wpcc26-site .wpcc26-hero__visual { position:relative; min-height:520px; }
+#wpcc26-site .wpcc26-hero__photo {
+  position:absolute; z-index:2; inset:34px 26px 36px 42px; overflow:hidden;
+  border-radius:6px 86px 6px 86px; box-shadow:16px 16px 0 var(--blue); transform:rotate(1.3deg);
+}
+#wpcc26-site .wpcc26-hero__photo img { height:100%; object-fit:cover; object-position:center 38%; }
+#wpcc26-site .wpcc26-blob { position:absolute; border-radius:50%; }
+#wpcc26-site .wpcc26-blob--purple { width:245px; height:245px; right:0; top:0; background:var(--purple); }
+#wpcc26-site .wpcc26-blob--pink { width:48px; height:48px; left:18px; bottom:54px; background:var(--pink); border:2px solid var(--ink); z-index:3; }
+#wpcc26-site .wpcc26-stamp {
+  position:absolute; z-index:4; right:4px; bottom:16px; padding:9px 14px;
+  background:var(--white); border:1.5px solid var(--ink); border-radius:999px;
+  font-size:.7rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
+}
+
+/* TICKER */
+#wpcc26-site .wpcc26-ticker { overflow:hidden; background:var(--blue); color:#fff; border-bottom:1px solid var(--ink); }
+#wpcc26-site .wpcc26-ticker__track {
+  white-space:nowrap; padding:13px 0; font-size:1.03rem; font-weight:800;
+  letter-spacing:.05em; word-spacing:24px;
+}
+
+/* INTRO */
+#wpcc26-site .wpcc26-intro { background:var(--paper); }
+#wpcc26-site .wpcc26-intro__grid { display:grid; grid-template-columns:.7fr 1.3fr; gap:80px; }
+#wpcc26-site .wpcc26-intro__lead { margin:0 0 32px; font-size:clamp(1.45rem,2.7vw,2.5rem); line-height:1.12; letter-spacing:-.035em; }
+#wpcc26-site .wpcc26-intro__grid p:not(.wpcc26-eyebrow):not(.wpcc26-intro__lead) { font-size:1.05rem; max-width:760px; }
+
+/* CHALLENGE */
+#wpcc26-site .wpcc26-challenge { background:var(--white); border-block:1px solid var(--ink); }
+#wpcc26-site .wpcc26-challenge__head { display:flex; justify-content:space-between; gap:50px; align-items:end; margin-bottom:65px; }
+#wpcc26-site .wpcc26-challenge__head > p { max-width:470px; font-size:1.08rem; }
 #wpcc26-site .wpcc26-days { display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--ink); }
 #wpcc26-site .wpcc26-day { position:relative; min-height:360px; padding:48px; }
 #wpcc26-site .wpcc26-day + .wpcc26-day { border-left:1px solid var(--ink); }
@@ -126,3 +254,11 @@
   #wpcc26-site .wpcc26-day h3 { font-size:2rem; }
   #wpcc26-site .wpcc26-agenda__row { grid-template-columns:72px 1fr; }
   #wpcc26-site .wpcc26-support__card { margin-top:20px; }
+  #wpcc26-site .wpcc26-mosaic { display:block; }
+  #wpcc26-site .wpcc26-mosaic figure { height:220px; margin-bottom:10px; }
+  #wpcc26-site .wpcc26-mosaic__a { height:300px !important; }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  #wpcc26-site .wpcc26-btn { transition:none; }
+}
