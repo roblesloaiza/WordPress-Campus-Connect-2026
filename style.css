@@ -1,399 +1,765 @@
-/* ==========================================
-   WP CAMPUS CONNECT SAN JOSÉ 2026
-   ========================================== */
+/* =====================================================
+   WORDPRESS CAMPUS CONNECT SAN JOSÉ 2026
+   HERO
+   ===================================================== */
 
-:root {
-    --wpcc-blue: #3858e9;
-    --wpcc-blue-light: #8ed1fc;
-    --wpcc-purple: #7b61ff;
-    --wpcc-pink: #cf2e8b;
 
-    --wpcc-dark: #10152b;
-    --wpcc-text: #1d2238;
-    --wpcc-muted: #62687c;
-
-    --wpcc-white: #ffffff;
-    --wpcc-offwhite: #f7f7fa;
-
-    --wpcc-radius: 24px;
-    --wpcc-max: 1200px;
-}
-
-/* Base */
-
-.wpcc-section {
-    padding: clamp(72px, 9vw, 130px) 24px;
-}
-
-.wpcc-container {
-    max-width: var(--wpcc-max);
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.wpcc-section h2 {
-    font-size: clamp(2.5rem, 6vw, 5.5rem);
-    line-height: .95;
-    letter-spacing: -0.055em;
-    margin-top: 0;
-}
-
-.wpcc-section p {
-    line-height: 1.7;
-}
-
-.wpcc-eyebrow {
-    font-size: .78rem;
-    font-weight: 700;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-}
-
-/* Botones */
-
-.wpcc-button .wp-block-button__link {
-    border-radius: 100px;
-    padding: 15px 25px;
-    font-weight: 650;
-    transition: transform .2s ease, opacity .2s ease;
-}
-
-.wpcc-button .wp-block-button__link:hover {
-    transform: translateY(-2px);
-}
-
-/* Texto destacado */
-
-.wpcc-lead {
-    font-size: clamp(1.25rem, 2vw, 1.65rem);
-    line-height: 1.55;
-    max-width: 760px;
-}
-
-/* Responsive */
-
-@media (max-width: 781px) {
-    .wpcc-section {
-        padding: 64px 20px;
-    }
-
-    .wpcc-section h2 {
-        letter-spacing: -0.04em;
-    }
-}
-
-/* =========================
-   WPCC 2026 — HERO
-   ========================= */
+/* -----------------------------
+   VARIABLES
+   ----------------------------- */
 
 .wpcc-hero {
-    --blue: #3858e9;
-    --purple: #7b61ff;
-    --pink: #cf2e8b;
-    --dark: #10152b;
-    --cream: #f7f7fa;
+    --wpcc-blue: #3858e9;
+    --wpcc-purple: #6f4cff;
+    --wpcc-pink: #d62b86;
+    --wpcc-dark: #11152b;
+    --wpcc-light: #f7f6fa;
+    --wpcc-white: #ffffff;
 
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
+
     overflow: hidden;
-    background: var(--cream);
-    color: var(--dark);
-    padding: clamp(70px, 9vw, 130px) 24px;
+
+    background: var(--wpcc-light);
+    color: var(--wpcc-dark);
+
+    padding:
+        clamp(70px, 8vw, 125px)
+        clamp(20px, 4vw, 48px);
 }
 
-.wpcc-hero__inner {
-    width: min(1200px, 100%);
+
+/* Todo respeta border-box */
+
+.wpcc-hero *,
+.wpcc-hero *::before,
+.wpcc-hero *::after {
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   CONTENEDOR
+   ===================================================== */
+
+.wpcc-hero__container {
+    width: 100%;
+    max-width: 1280px;
+
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr);
+
+    grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(380px, 0.95fr);
+
     gap: clamp(50px, 7vw, 100px);
+
     align-items: center;
 }
 
 
-/* TEXTO */
+/* =====================================================
+   CONTENIDO
+   ===================================================== */
+
+.wpcc-hero__content {
+    position: relative;
+    z-index: 5;
+
+    min-width: 0;
+}
+
+
+/* Etiqueta superior */
 
 .wpcc-hero__eyebrow {
     margin: 0 0 28px;
-    font-size: .78rem;
+
+    color: var(--wpcc-blue);
+
+    font-size: clamp(0.72rem, 1vw, 0.82rem);
     font-weight: 700;
-    letter-spacing: .14em;
+
+    line-height: 1.3;
+
+    letter-spacing: 0.14em;
+
     text-transform: uppercase;
 }
+
+
+/* =====================================================
+   TÍTULO
+   ===================================================== */
 
 .wpcc-hero__title {
     margin: 0;
 
-    font-size: clamp(5rem, 10vw, 9.5rem);
-    line-height: .76;
-    letter-spacing: -.075em;
+    color: var(--wpcc-dark);
+
+    font-size: clamp(4.8rem, 8.3vw, 8.5rem);
+
+    line-height: 0.76;
+
+    letter-spacing: -0.07em;
+}
+
+.wpcc-hero__title-main {
+    display: block;
+
     font-weight: 800;
 }
 
-.wpcc-hero__title span {
+.wpcc-hero__title-secondary {
     display: block;
+
+    margin-top: 0.12em;
+
+    color: var(--wpcc-purple);
+
+    font-weight: 500;
+    font-style: italic;
+
+    letter-spacing: -0.055em;
 }
 
-.wpcc-hero__title em {
-    display: block;
-    font-weight: 400;
-}
+
+/* =====================================================
+   FECHA
+   ===================================================== */
 
 .wpcc-hero__date {
-    display: inline-block;
-    margin: 45px 0 22px;
+    display: block;
+
+    width: fit-content;
+    max-width: 100%;
+
+    margin:
+        clamp(38px, 5vw, 58px)
+        0
+        22px;
+
     padding-top: 14px;
 
-    border-top: 2px solid var(--dark);
+    border-top: 2px solid var(--wpcc-dark);
 
-    font-size: .85rem;
+    font-size: clamp(0.72rem, 1vw, 0.85rem);
     font-weight: 700;
-    letter-spacing: .09em;
+
+    line-height: 1.5;
+
+    letter-spacing: 0.08em;
+
     text-transform: uppercase;
 }
 
+
+/* =====================================================
+   DESCRIPCIÓN
+   ===================================================== */
+
 .wpcc-hero__description {
     max-width: 590px;
+
     margin: 0;
 
-    font-size: clamp(1.05rem, 1.5vw, 1.25rem);
-    line-height: 1.65;
+    color: #363a4d;
+
+    font-size: clamp(1rem, 1.35vw, 1.18rem);
+
+    line-height: 1.7;
 }
+
+
+/* =====================================================
+   BOTONES
+   ===================================================== */
 
 .wpcc-hero__actions {
     display: flex;
     flex-wrap: wrap;
+
     gap: 12px;
+
     margin-top: 32px;
 }
 
+
 .wpcc-hero__button {
     display: inline-flex;
+
+    min-height: 50px;
+
     align-items: center;
     justify-content: center;
 
-    padding: 14px 24px;
+    padding: 13px 24px;
 
-    border: 2px solid var(--dark);
-    border-radius: 100px;
+    border: 2px solid var(--wpcc-dark);
+    border-radius: 999px;
 
-    color: var(--dark);
-    text-decoration: none;
+    font-size: 0.95rem;
     font-weight: 700;
 
+    line-height: 1.2;
+
+    text-decoration: none !important;
+
     transition:
-        transform .2s ease,
-        background .2s ease,
-        color .2s ease;
+        transform 180ms ease,
+        background-color 180ms ease,
+        color 180ms ease;
 }
+
 
 .wpcc-hero__button--primary {
-    background: var(--dark);
-    color: #fff;
+    background: var(--wpcc-dark);
+    color: var(--wpcc-white) !important;
 }
+
+
+.wpcc-hero__button--secondary {
+    background: transparent;
+    color: var(--wpcc-dark) !important;
+}
+
 
 .wpcc-hero__button:hover {
-    transform: translateY(-3px);
-}
-
-.wpcc-hero__button:not(.wpcc-hero__button--primary):hover {
-    background: var(--dark);
-    color: white;
+    transform: translateY(-2px);
 }
 
 
-/* =========================
-   IMAGEN
-   ========================= */
+.wpcc-hero__button--secondary:hover {
+    background: var(--wpcc-dark);
+    color: var(--wpcc-white) !important;
+}
+
+
+/* =====================================================
+   CONTENEDOR VISUAL
+   ===================================================== */
 
 .wpcc-hero__visual {
     position: relative;
-    min-height: 600px;
+
+    width: 100%;
+    min-width: 0;
+
+    isolation: isolate;
+
+    padding:
+        clamp(22px, 3vw, 40px)
+        clamp(18px, 3vw, 35px)
+        clamp(30px, 4vw, 50px);
 }
 
-/* Mancha morada detrás */
 
-.wpcc-hero__visual::before {
-    content: "";
+/* =====================================================
+   FORMAS DECORATIVAS
+   ===================================================== */
+
+.wpcc-hero__shape {
     position: absolute;
 
-    width: 72%;
-    height: 75%;
+    display: block;
 
-    right: -8%;
-    top: 5%;
+    pointer-events: none;
 
-    background: var(--purple);
+    z-index: -1;
+}
+
+
+/* Morado */
+
+.wpcc-hero__shape--purple {
+    width: 75%;
+    height: 80%;
+
+    top: 0;
+    right: -3%;
+
+    background: var(--wpcc-purple);
 
     border-radius:
         42% 58% 64% 36% /
         40% 38% 62% 60%;
 
-    transform: rotate(8deg);
+    transform: rotate(7deg);
 }
 
-/* Mancha magenta */
 
-.wpcc-hero__visual::after {
-    content: "";
-    position: absolute;
+/* Magenta */
 
-    width: 45%;
-    height: 38%;
+.wpcc-hero__shape--pink {
+    width: 46%;
+    height: 42%;
 
-    left: -5%;
-    bottom: 2%;
+    left: -2%;
+    bottom: 0;
 
-    background: var(--pink);
+    background: var(--wpcc-pink);
 
     border-radius:
         62% 38% 48% 52% /
         45% 58% 42% 55%;
 
-    transform: rotate(-9deg);
+    transform: rotate(-8deg);
 }
 
 
-/* Contenedor de la foto */
+/* Azul pequeño */
 
-.wpcc-hero__photo {
-    position: absolute;
+.wpcc-hero__shape--blue {
+    width: clamp(60px, 7vw, 95px);
+    aspect-ratio: 1 / 1;
+
+    left: 0;
+    top: 7%;
+
+    background: var(--wpcc-blue);
+
+    border-radius: 50%;
+
+    z-index: 3;
+}
+
+
+/* =====================================================
+   FOTO
+   ===================================================== */
+
+.wpcc-hero__figure {
+    position: relative;
+
     z-index: 2;
 
-    width: 86%;
-    height: 84%;
+    width: 100%;
 
-    top: 7%;
-    left: 7%;
+    margin: 0;
+
+    aspect-ratio: 4 / 5;
 
     overflow: hidden;
 
-    border-radius:
-        48% 52% 43% 57% /
-        39% 46% 54% 61%;
+    background: #e7e7ed;
 
-    transform: rotate(-2deg);
+    border-radius:
+        45% 55% 44% 56% /
+        38% 43% 57% 62%;
+
+    transform: rotate(-1.5deg);
 }
 
-.wpcc-hero__photo img {
+
+.wpcc-hero__image {
+    display: block;
+
     width: 100%;
     height: 100%;
 
-    display: block;
+    max-width: none;
+
     object-fit: cover;
-    object-position: center;
 
-    transform: scale(1.04);
-    transition: transform .7s ease;
+    /*
+     * La fotografía tiene el elemento principal
+     * ligeramente hacia la derecha.
+     */
+    object-position: 57% center;
+
+    transform: scale(1.02);
+
+    transition: transform 600ms ease;
 }
 
-.wpcc-hero__photo:hover img {
-    transform: scale(1.09);
+
+.wpcc-hero__figure:hover .wpcc-hero__image {
+    transform: scale(1.055);
 }
 
 
-/* Etiqueta encima de la imagen */
+/* =====================================================
+   ETIQUETA SOBRE LA FOTO
+   ===================================================== */
 
-.wpcc-hero__tag {
+.wpcc-hero__photo-label {
     position: absolute;
+
     z-index: 4;
 
     right: 0;
-    bottom: 13%;
+    bottom: 10%;
 
-    padding: 12px 18px;
+    display: flex;
 
-    background: #fff;
-    border: 2px solid var(--dark);
-    border-radius: 100px;
+    align-items: center;
 
-    font-size: .72rem;
+    gap: 8px;
+
+    padding: 9px 15px 9px 9px;
+
+    background: var(--wpcc-white);
+
+    border: 2px solid var(--wpcc-dark);
+    border-radius: 999px;
+
+    color: var(--wpcc-dark);
+
+    font-size: 0.66rem;
     font-weight: 800;
-    letter-spacing: .08em;
-    text-transform: uppercase;
+
+    line-height: 1;
+
+    letter-spacing: 0.08em;
+
+    white-space: nowrap;
 
     transform: rotate(3deg);
 }
 
 
-/* Círculo decorativo */
+.wpcc-hero__photo-label span {
+    display: inline-flex;
 
-.wpcc-hero__circle {
-    position: absolute;
-    z-index: 3;
+    width: 34px;
+    height: 34px;
 
-    width: 85px;
-    height: 85px;
-
-    left: 0;
-    top: 10%;
-
-    border-radius: 50%;
-    background: var(--blue);
-
-    display: flex;
     align-items: center;
     justify-content: center;
 
+    background: var(--wpcc-blue);
+
+    border-radius: 50%;
+
     color: white;
-    font-size: 1.7rem;
+
+    font-size: 0.65rem;
 }
 
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+/* =====================================================
+   LAPTOP PEQUEÑA / TABLET HORIZONTAL
+   782px — 1050px
+   ===================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
 
     .wpcc-hero {
-        padding-top: 70px;
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 
-    .wpcc-hero__inner {
+
+    .wpcc-hero__container {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(320px, 0.8fr);
+
+        gap: 45px;
+    }
+
+
+    .wpcc-hero__title {
+        font-size: clamp(4.5rem, 8.5vw, 6.5rem);
+    }
+
+
+    .wpcc-hero__figure {
+        aspect-ratio: 4 / 5;
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+   <= 781px
+   Gutenberg también cambia columnas alrededor de aquí.
+   ===================================================== */
+
+@media (max-width: 781px) {
+
+    .wpcc-hero {
+        padding:
+            70px
+            clamp(20px, 5vw, 40px)
+            80px;
+    }
+
+
+    .wpcc-hero__container {
+        display: grid;
+
         grid-template-columns: 1fr;
+
+        gap: 55px;
     }
+
+
+    .wpcc-hero__content {
+        width: 100%;
+    }
+
 
     .wpcc-hero__title {
-        font-size: clamp(4.5rem, 17vw, 8rem);
+        font-size: clamp(5rem, 16vw, 8rem);
+
+        max-width: 700px;
     }
 
-    .wpcc-hero__visual {
-        min-height: 570px;
-        max-width: 600px;
-        width: 100%;
-        margin: 15px auto 0;
+
+    .wpcc-hero__description {
+        max-width: 650px;
     }
+
+
+    .wpcc-hero__visual {
+        width: min(100%, 650px);
+
+        margin: 0 auto;
+
+        padding:
+            30px
+            35px
+            45px;
+    }
+
+
+    .wpcc-hero__figure {
+        aspect-ratio: 5 / 4;
+
+        border-radius:
+            38% 62% 43% 57% /
+            44% 42% 58% 56%;
+    }
+
+
+    .wpcc-hero__image {
+        object-position: center 48%;
+    }
+
+
+    .wpcc-hero__shape--purple {
+        width: 72%;
+        height: 80%;
+
+        right: -1%;
+    }
+
+
+    .wpcc-hero__shape--pink {
+        width: 42%;
+        height: 45%;
+    }
+
 }
 
-@media (max-width: 520px) {
+
+/* =====================================================
+   MÓVIL
+   <= 600px
+   ===================================================== */
+
+@media (max-width: 600px) {
 
     .wpcc-hero {
-        padding-left: 18px;
-        padding-right: 18px;
+        padding:
+            55px
+            18px
+            65px;
     }
+
+
+    .wpcc-hero__container {
+        gap: 42px;
+    }
+
+
+    .wpcc-hero__eyebrow {
+        margin-bottom: 20px;
+
+        font-size: 0.68rem;
+
+        letter-spacing: 0.11em;
+    }
+
 
     .wpcc-hero__title {
-        font-size: clamp(4rem, 20vw, 6rem);
+        font-size: clamp(4rem, 20vw, 6.4rem);
+
+        line-height: 0.79;
+
+        letter-spacing: -0.065em;
     }
 
-    .wpcc-hero__visual {
-        min-height: 430px;
+
+    .wpcc-hero__title-secondary {
+        margin-top: 0.14em;
     }
 
-    .wpcc-hero__photo {
-        width: 90%;
-        height: 82%;
-        left: 5%;
+
+    .wpcc-hero__date {
+        width: 100%;
+
+        margin-top: 36px;
+
+        font-size: 0.7rem;
+
+        line-height: 1.6;
     }
 
-    .wpcc-hero__circle {
-        width: 65px;
-        height: 65px;
+
+    .wpcc-hero__description {
+        font-size: 1rem;
+
+        line-height: 1.65;
     }
+
 
     .wpcc-hero__actions {
+        width: 100%;
+
         flex-direction: column;
-        align-items: flex-start;
+
+        align-items: stretch;
+
+        gap: 10px;
+
+        margin-top: 28px;
     }
+
+
+    .wpcc-hero__button {
+        width: 100%;
+
+        min-height: 52px;
+    }
+
+
+    /* Imagen */
+
+    .wpcc-hero__visual {
+        width: 100%;
+
+        padding:
+            20px
+            18px
+            38px;
+    }
+
+
+    .wpcc-hero__figure {
+        width: 100%;
+
+        aspect-ratio: 4 / 5;
+
+        border-radius:
+            42% 58% 46% 54% /
+            40% 44% 56% 60%;
+    }
+
+
+    .wpcc-hero__image {
+        object-position: 55% center;
+    }
+
+
+    .wpcc-hero__shape--purple {
+        width: 78%;
+        height: 76%;
+
+        right: -2%;
+        top: 1%;
+    }
+
+
+    .wpcc-hero__shape--pink {
+        width: 50%;
+        height: 38%;
+
+        left: -2%;
+        bottom: 0;
+    }
+
+
+    .wpcc-hero__shape--blue {
+        width: 58px;
+
+        left: 0;
+        top: 4%;
+    }
+
+
+    .wpcc-hero__photo-label {
+        right: 2px;
+        bottom: 8%;
+
+        font-size: 0.58rem;
+
+        padding: 7px 11px 7px 7px;
+    }
+
+
+    .wpcc-hero__photo-label span {
+        width: 28px;
+        height: 28px;
+
+        font-size: 0.55rem;
+    }
+
+}
+
+
+/* =====================================================
+   MÓVILES MUY PEQUEÑOS
+   <= 380px
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .wpcc-hero {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+    .wpcc-hero__title {
+        font-size: clamp(3.55rem, 19vw, 4.5rem);
+    }
+
+
+    .wpcc-hero__visual {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    .wpcc-hero__photo-label {
+        right: 0;
+    }
+
+}
+
+
+/* =====================================================
+   ACCESIBILIDAD
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .wpcc-hero__button,
+    .wpcc-hero__image {
+        transition: none;
+    }
+
+
+    .wpcc-hero__button:hover,
+    .wpcc-hero__figure:hover .wpcc-hero__image {
+        transform: none;
+    }
+
 }
