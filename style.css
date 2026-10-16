@@ -1,100 +1,55 @@
-/* CSS del evento. Pegue este archivo completo en CSS adicional, sin etiquetas style. */
-.wpcc-site{--navy:#001f60;--purple:#510c76;--pink:#e41e93;--aqua:#13d0ca;--paper:#faf9f6;color:var(--navy);background:var(--paper);font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.65;margin:0 auto!important;max-width:none!important;width:100%;overflow-wrap:break-word}
-.wpcc-site *{box-sizing:border-box}.wpcc-site :where(h1,h2,h3,p,figure){margin:0}.wpcc-site h1,.wpcc-site h2,.wpcc-site h3{color:inherit;font-family:Arial,Helvetica,sans-serif;font-weight:800;letter-spacing:-.045em;line-height:1.08}.wpcc-site h1{font-size:clamp(44px,5.7vw,78px);margin:22px 0}.wpcc-site h2{font-size:clamp(32px,3.6vw,46px);margin:15px 0 24px}.wpcc-site h3{font-size:23px;letter-spacing:-.025em}.wpcc-site p+p{margin-top:14px}.wpcc-site a{color:inherit;text-underline-offset:5px}.wpcc-site a:focus-visible,.wpcc-site summary:focus-visible{outline:3px solid var(--pink);outline-offset:5px}.wpcc-site img{display:block;max-width:100%;height:auto}.wpcc-site [id]{scroll-margin-top:28px}
-.wpcc-nav,.wpcc-hero,.wpcc-facts,.wpcc-section,.wpcc-cta{padding-left:max(6%,calc((100% - 1120px)/2));padding-right:max(6%,calc((100% - 1120px)/2))}.wpcc-nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:27px;padding-bottom:27px;border-bottom:1px solid #001f6020}.wpcc-brand{font-size:18px;letter-spacing:-.5px;line-height:1.3}.wpcc-brand span{color:var(--purple)}.wpcc-navlinks{display:flex;gap:25px;margin:0!important;font-size:14px;font-weight:700}.wpcc-navlinks a{text-decoration:none}
-.wpcc-hero{display:grid;grid-template-columns:1.35fr 1fr;gap:55px;padding-top:65px;padding-bottom:65px;align-items:center}.wpcc-eyebrow{font-size:11px!important;font-weight:800;letter-spacing:1.65px;line-height:1.6}.wpcc-eventname{font-size:22px;font-weight:700;margin-bottom:14px!important}.wpcc-hero-copy>p:not(.wpcc-eyebrow){max-width:510px}.wpcc-site .wp-block-buttons{display:flex;margin-top:28px}.wpcc-site .wp-block-button__link{display:inline-block;background:var(--navy);color:white;border-radius:6px;padding:15px 25px;font-weight:700;text-decoration:none;font-size:16px}.wpcc-site .wp-block-button__link:hover{background:var(--purple)}.wpcc-caption{font-size:13px;margin-top:17px!important}.wpcc-hero-art{background:var(--purple);border-radius:0;overflow:visible;transform:rotate(0deg);background:transparent}.wpcc-mascot img{width:100%;aspect-ratio:.82;object-fit:cover;object-position:center}.wpcc-stamp{margin:0!important;background:var(--navy);color:white;padding:17px;text-align:center;font-size:10px;font-weight:bold;letter-spacing:2px}.wpcc-facts{display:grid;grid-template-columns:repeat(3,1fr);background:var(--navy);color:white;padding-top:28px;padding-bottom:28px;gap:30px}.wpcc-fact{display:flex;align-items:center;gap:20px}.wpcc-fact h3{font-size:42px;color:var(--aqua)}.wpcc-fact p{font-size:14px;line-height:1.4;max-width:130px}.wpcc-section{padding-top:78px;padding-bottom:78px}.wpcc-section>p:not(.wpcc-eyebrow){max-width:700px}.wpcc-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px}.wpcc-card{border-top:3px solid var(--purple);padding-top:24px}.wpcc-card:nth-child(2){border-color:var(--pink)}.wpcc-card:nth-child(3){border-color:var(--aqua)}.wpcc-number{font-size:12px;letter-spacing:2px;color:var(--purple);font-weight:bold;margin-bottom:22px!important}.wpcc-card h3{margin-bottom:15px}.wpcc-card p{font-size:15px}.wpcc-program{background:#fff}.wpcc-program>p{margin-bottom:30px}.wpcc-site details{border-top:1px solid #001f6028;padding:0}.wpcc-site details:last-child{border-bottom:1px solid #001f6028}.wpcc-site summary{padding:23px 6px;cursor:pointer;font-weight:700;font-size:18px;line-height:1.5}.wpcc-site details>p{padding:0 8px 24px;font-size:16px;max-width:760px}.wpcc-program summary{color:var(--purple)}.wpcc-agenda-row{display:grid;grid-template-columns:125px 1fr;gap:25px;border-top:1px solid #001f6014;padding:21px 8px}.wpcc-time{font-size:13px;font-weight:bold;line-height:1.6}.wpcc-agenda-description h3{font-size:17px;line-height:1.4;letter-spacing:0}.wpcc-agenda-description p{font-size:14px;color:#41516b;margin-top:4px}.wpcc-journal{background:var(--purple);color:white;display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:center}.wpcc-journal-note{border:1px solid #ffffff60;padding:30px;border-radius:6px}.wpcc-journal-note h3{margin:18px 0}.wpcc-journal-note p{font-size:14px}.wpcc-cta{text-align:center;padding-top:70px;padding-bottom:70px;background:var(--aqua)}.wpcc-cta h2{font-size:clamp(34px,4vw,54px)}.wpcc-status{display:inline-block;padding:11px 20px;border:1px solid var(--navy);border-radius:30px;font-size:14px;font-weight:bold;margin-top:25px!important}.wpcc-banner img{width:100%}.wpcc-footer-copy{text-align:center;padding:22px;font-size:12px;background:var(--navy);color:white}
-@media(max-width:760px){.wpcc-nav{align-items:flex-start;flex-direction:column;gap:16px}.wpcc-navlinks{gap:22px;flex-wrap:wrap}.wpcc-hero{grid-template-columns:1fr;gap:36px;padding-top:40px;padding-bottom:40px}.wpcc-hero-art{max-width:420px;width:100%;margin:auto}.wpcc-facts{gap:15px;padding-top:25px;padding-bottom:25px}.wpcc-fact{display:block}.wpcc-fact h3{font-size:34px;margin-bottom:8px}.wpcc-fact p{font-size:12px}.wpcc-section{padding-top:48px;padding-bottom:48px}.wpcc-cards,.wpcc-journal{grid-template-columns:1fr;gap:30px}.wpcc-agenda-row{grid-template-columns:1fr;gap:7px}.wpcc-site summary{font-size:16px}.wpcc-journal-note{padding:25px}.wpcc-cta{padding-top:48px;padding-bottom:48px}.wpcc-footer-copy{font-size:11px}.wpcc-site .wp-block-button__link{min-height:48px}}
-
-/* Animaciones opcionales WPCC. Pegar DESPUÉS del CSS base. */
-.wpcc-site{--wpcc-ease-out:cubic-bezier(0.23,1,0.32,1);--wpcc-ease-in-out:cubic-bezier(0.77,0,0.175,1)}
-/* Flotación continua, suave y de poca amplitud. */
+/* WPCC 2026 — CSS ÚNICO
+   Gutenberg controla estructura, colores, tamaños, anchos y espaciados.
+   Grupo exterior: wpcc-gb. Retirar las clases del método anterior.
+   1. Movimiento de Fidebot y entrada del texto.
+   2. Respuesta del botón y marcador de Detalles.
+   3. Foco de teclado y preferencia de movimiento reducido.
+   4. Excepciones opcionales: solo al faltar el control en el editor.
+   Este archivo no crea columnas ni cambia los colores generales. */
 @media (prefers-reduced-motion:no-preference){
-  .wpcc-site .wpcc-hero-art{animation:wpcc-fidebot-flotar 4.8s ease-in-out infinite;transform-origin:50% 65%}
-  .wpcc-site .wpcc-hero-copy>*{transition:opacity 220ms var(--wpcc-ease-out),transform 220ms var(--wpcc-ease-out)}
-  .wpcc-site .wpcc-hero-copy>:nth-child(2){transition-delay:40ms}
-  .wpcc-site .wpcc-hero-copy>:nth-child(3){transition-delay:80ms}
-  .wpcc-site .wpcc-hero-copy>:nth-child(4){transition-delay:120ms}
-  .wpcc-site .wpcc-hero-copy>:nth-child(5){transition-delay:160ms}
-  .wpcc-site .wpcc-hero-copy>:nth-child(6){transition-delay:200ms}
-  @starting-style{
-    .wpcc-site .wpcc-hero-copy>*{opacity:0;transform:translateY(8px)}
-  }
-  .wpcc-site .wp-block-button__link{transition:transform 160ms var(--wpcc-ease-out)}
-  .wpcc-site .wp-block-button__link:active{transform:scale(.97)}
-  .wpcc-site summary::after{transition:transform 180ms var(--wpcc-ease-out)}
+  .wpcc-gb .wpcc-gb-fidebot{animation:wpcc-gb-flotar 4.8s ease-in-out infinite;transform-origin:50% 65%}
+  .wpcc-gb .wpcc-gb-entrada>*{transition:opacity 220ms cubic-bezier(.23,1,.32,1),transform 220ms cubic-bezier(.23,1,.32,1)}
+  .wpcc-gb .wpcc-gb-entrada>:nth-child(2){transition-delay:40ms}
+  .wpcc-gb .wpcc-gb-entrada>:nth-child(3){transition-delay:80ms}
+  .wpcc-gb .wpcc-gb-entrada>:nth-child(4){transition-delay:120ms}
+  .wpcc-gb .wpcc-gb-entrada>:nth-child(5){transition-delay:160ms}
+  @starting-style{.wpcc-gb .wpcc-gb-entrada>*{opacity:0;transform:translateY(8px)}}
+  .wpcc-gb .wpcc-gb-boton .wp-block-button__link{transition:transform 160ms cubic-bezier(.23,1,.32,1)}
+  .wpcc-gb .wpcc-gb-boton .wp-block-button__link:active{transform:scale(.97)}
+  .wpcc-gb .wpcc-gb-detalles summary::after{transition:transform 180ms cubic-bezier(.23,1,.32,1)}
 }
-@keyframes wpcc-fidebot-flotar{
-  0%,100%{transform:translateY(0) rotate(0deg)}
-  50%{transform:translateY(-8px) rotate(-.4deg)}
-}
-/* El indicador cambia de + a × sin mover el texto ni retrasar la apertura. */
-.wpcc-site summary{position:relative;list-style:none;padding-right:38px}
-.wpcc-site summary::-webkit-details-marker{display:none}
-.wpcc-site summary::marker{content:""}
-.wpcc-site summary::after{content:"+";position:absolute;right:8px;top:23px;font:22px/1.3 Arial,sans-serif;transform:rotate(0deg)}
-.wpcc-site details[open]>summary::after{transform:rotate(45deg)}
-/* Los efectos de ratón se limitan a dispositivos con cursor preciso. */
-@media (hover:hover) and (pointer:fine){
-  .wpcc-site .wpcc-navlinks a{position:relative}
-  .wpcc-site .wpcc-navlinks a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:2px;background:var(--pink);opacity:0;transform:scaleX(.7);transform-origin:left}
-  .wpcc-site .wpcc-navlinks a:hover::after{opacity:1;transform:scaleX(1)}
-}
+@keyframes wpcc-gb-flotar{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-8px) rotate(-.4deg)}}
+/* Indicador personalizado del bloque Detalles: Gutenberg no ofrece +/× animado. */
+.wpcc-gb .wpcc-gb-detalles>summary{position:relative;list-style:none;padding-right:38px}
+.wpcc-gb .wpcc-gb-detalles>summary::-webkit-details-marker{display:none}
+.wpcc-gb .wpcc-gb-detalles>summary::marker{content:""}
+.wpcc-gb .wpcc-gb-detalles>summary::after{content:"+";position:absolute;right:8px;top:50%;transform:translateY(-50%) rotate(0deg);font-size:22px;line-height:1}
+.wpcc-gb .wpcc-gb-detalles[open]>summary::after{transform:translateY(-50%) rotate(45deg)}
+/* El editor no ofrece un control de foco personalizado para estos bloques. */
+.wpcc-gb :where(a,summary):focus-visible{outline:3px solid #e41e93;outline-offset:5px}
 @media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
-  .wpcc-site .wpcc-navlinks a::after{transition:transform 160ms var(--wpcc-ease-out),opacity 160ms var(--wpcc-ease-out)}
-  .wpcc-site .wp-block-button__link:hover{transform:translateY(-2px)}
-  .wpcc-site .wp-block-button__link:active{transform:scale(.97)}
+  .wpcc-gb .wpcc-gb-boton .wp-block-button__link:hover{transform:translateY(-2px)}
+  .wpcc-gb .wpcc-gb-boton .wp-block-button__link:active{transform:scale(.97)}
 }
-/* Sin desplazamientos para quienes solicitan reducir el movimiento. */
 @media (prefers-reduced-motion:reduce){
-  .wpcc-site .wpcc-hero-art{animation:none}
-  .wpcc-site .wpcc-navlinks a::after{transform:none;transition:opacity 120ms ease}
-  .wpcc-site .wpcc-hero-copy>*{transition:opacity 160ms ease}
-  @starting-style{.wpcc-site .wpcc-hero-copy>*{opacity:0}}
+  .wpcc-gb .wpcc-gb-fidebot{animation:none}
+  .wpcc-gb .wpcc-gb-entrada>*{transition:opacity 160ms ease}
+  @starting-style{.wpcc-gb .wpcc-gb-entrada>*{opacity:0}}
 }
 
-/* Animaciones opcionales WPCC. Pegar DESPUÉS del CSS base. */
-.wpcc-site{--wpcc-ease-out:cubic-bezier(0.23,1,0.32,1);--wpcc-ease-in-out:cubic-bezier(0.77,0,0.175,1)}
-/* Flotación continua, suave y de poca amplitud. */
-@media (prefers-reduced-motion:no-preference){
-  .wpcc-site .wpcc-hero-art{animation:wpcc-fidebot-flotar 4.8s ease-in-out infinite;transform-origin:50% 65%}
-  .wpcc-site .wpcc-hero-copy>*{transition:opacity 220ms var(--wpcc-ease-out),transform 220ms var(--wpcc-ease-out)}
-  .wpcc-site .wpcc-hero-copy>:nth-child(2){transition-delay:40ms}
-  .wpcc-site .wpcc-hero-copy>:nth-child(3){transition-delay:80ms}
-  .wpcc-site .wpcc-hero-copy>:nth-child(4){transition-delay:120ms}
-  .wpcc-site .wpcc-hero-copy>:nth-child(5){transition-delay:160ms}
-  .wpcc-site .wpcc-hero-copy>:nth-child(6){transition-delay:200ms}
-  @starting-style{
-    .wpcc-site .wpcc-hero-copy>*{opacity:0;transform:translateY(8px)}
-  }
-  .wpcc-site .wp-block-button__link{transition:transform 160ms var(--wpcc-ease-out)}
-  .wpcc-site .wp-block-button__link:active{transform:scale(.97)}
-  .wpcc-site summary::after{transition:transform 180ms var(--wpcc-ease-out)}
+/* 4A. OPCIONAL: añade wpcc-gb-arial al grupo exterior SOLO si el editor
+   no ofrece Arial. No es necesario añadir esta clase si ya elegiste la fuente. */
+.wpcc-gb.wpcc-gb-arial{font-family:Arial,Helvetica,sans-serif}
+/* 4B. OPCIONAL: añade wpcc-gb-adaptable al grupo exterior SOLO si el tema
+   no permite tamaños/rellenos por dispositivo o tipografía fluida.
+   Los !important reemplazan los valores de escritorio escritos en línea por WP. */
+@media(max-width:781px){
+ .wpcc-gb.wpcc-gb-adaptable .wpcc-gb-h1{font-size:44px!important}
+ .wpcc-gb.wpcc-gb-adaptable .wpcc-gb-h2{font-size:32px!important}
+ .wpcc-gb.wpcc-gb-adaptable .wpcc-gb-cierre-titulo{font-size:34px!important}
+ .wpcc-gb.wpcc-gb-adaptable .wpcc-gb-seccion{padding-top:48px!important;padding-bottom:48px!important}
+ .wpcc-gb.wpcc-gb-adaptable .wpcc-gb-portada{padding-top:40px!important;padding-bottom:40px!important}
 }
-@keyframes wpcc-fidebot-flotar{
-  0%,100%{transform:translateY(0) rotate(0deg)}
-  50%{transform:translateY(-8px) rotate(-.4deg)}
-}
-/* El indicador cambia de + a × sin mover el texto ni retrasar la apertura. */
-.wpcc-site summary{position:relative;list-style:none;padding-right:38px}
-.wpcc-site summary::-webkit-details-marker{display:none}
-.wpcc-site summary::marker{content:""}
-.wpcc-site summary::after{content:"+";position:absolute;right:8px;top:23px;font:22px/1.3 Arial,sans-serif;transform:rotate(0deg)}
-.wpcc-site details[open]>summary::after{transform:rotate(45deg)}
-/* Los efectos de ratón se limitan a dispositivos con cursor preciso. */
-@media (hover:hover) and (pointer:fine){
-  .wpcc-site .wpcc-navlinks a{position:relative}
-  .wpcc-site .wpcc-navlinks a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:2px;background:var(--pink);opacity:0;transform:scaleX(.7);transform-origin:left}
-  .wpcc-site .wpcc-navlinks a:hover::after{opacity:1;transform:scaleX(1)}
-}
-@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
-  .wpcc-site .wpcc-navlinks a::after{transition:transform 160ms var(--wpcc-ease-out),opacity 160ms var(--wpcc-ease-out)}
-  .wpcc-site .wp-block-button__link:hover{transform:translateY(-2px)}
-  .wpcc-site .wp-block-button__link:active{transform:scale(.97)}
-}
-/* Sin desplazamientos para quienes solicitan reducir el movimiento. */
-@media (prefers-reduced-motion:reduce){
-  .wpcc-site .wpcc-hero-art{animation:none}
-  .wpcc-site .wpcc-navlinks a::after{transform:none;transition:opacity 120ms ease}
-  .wpcc-site .wpcc-hero-copy>*{transition:opacity 160ms ease}
-  @starting-style{.wpcc-site .wpcc-hero-copy>*{opacity:0}}
-}
+/* 4C. OPCIONAL: añade wpcc-gb-tracking al grupo exterior SOLO si el editor
+   no ofrece espaciado entre letras en los encabezados. */
+.wpcc-gb.wpcc-gb-tracking :is(.wpcc-gb-h1,.wpcc-gb-h2,.wpcc-gb-cierre-titulo){letter-spacing:-.045em}
