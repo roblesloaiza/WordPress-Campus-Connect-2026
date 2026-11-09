@@ -826,30 +826,30 @@ body.wp-theme-campus-connect {
 }
 
 
+
 /* ==========================================
-   CAMPUS CONNECT 2026
-   AGENDA MINIMALISTA / EDITORIAL
+   WORDPRESS CAMPUS CONNECT 2026
+   AGENDA COLORIDA Y ESPACIADA
    ========================================== */
 
-/* Variables exclusivas de la agenda */
 .page-slug-schedule .wp-block-wordcamp-schedule {
-    --agenda-text: #202124;
-    --agenda-muted: #69717d;
-    --agenda-line: #e5e7eb;
-    --agenda-accent: #003b80;
+    --cc-blue: #175cd3;
+    --cc-purple: #7546d9;
+    --cc-pink: #e348a0;
+    --cc-orange: #f39a32;
+    --cc-teal: #00a99d;
+    --cc-text: #17233b;
 
     width: 100%;
-    max-width: 1100px;
+    max-width: 1150px;
     margin: 40px auto;
-    color: var(--agenda-text);
-    font-family: Inter, Arial, sans-serif;
+    font-family: Inter, sans-serif;
 }
 
-/* Contenedor original de WordCamp */
+/* CONTENEDOR */
 .page-slug-schedule .wordcamp-schedule {
     width: 100%;
-    background: transparent;
-    color: var(--agenda-text);
+    color: var(--cc-text);
 }
 
 /* ==========================================
@@ -857,164 +857,204 @@ body.wp-theme-campus-connect {
    ========================================== */
 
 .page-slug-schedule .wordcamp-schedule__date {
-    margin: 56px 0 24px !important;
-    padding: 0 0 18px !important;
+    margin: 52px 0 24px !important;
+    padding: 24px 30px !important;
 
-    background: transparent !important;
-    color: #171717 !important;
+    background: linear-gradient(
+        110deg,
+        #175cd3 0%,
+        #7546d9 55%,
+        #e348a0 100%
+    ) !important;
 
+    color: #ffffff !important;
     border: 0 !important;
-    border-bottom: 2px solid #171717 !important;
-    border-radius: 0 !important;
+    border-radius: 18px !important;
 
-    font-size: clamp(24px, 3vw, 34px) !important;
-    font-weight: 700 !important;
-    line-height: 1.2 !important;
-    letter-spacing: -0.035em;
-
+    font-size: clamp(23px, 3vw, 32px) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.025em;
     box-shadow: none !important;
     text-transform: capitalize;
 }
 
-.page-slug-schedule
-.wordcamp-schedule__date:first-child {
-    margin-top: 0 !important;
-}
-
 /* ==========================================
-   ESTRUCTURA DE CADA DÍA
+   ELIMINAR HORAS MUERTAS
+   Y REORGANIZAR LA AGENDA
    ========================================== */
 
-.page-slug-schedule .wordcamp-schedule__day {
-    background: transparent !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
+/* Reemplaza el grid temporal por filas
+   de contenido con altura automática */
+.page-slug-schedule
+.wordcamp-schedule.is-style-single-column-layout
+.wordcamp-schedule__day {
+    display: grid !important;
 
-    padding: 0 !important;
+    grid-template-columns: 110px minmax(0, 1fr) !important;
+    grid-template-rows: none !important;
+    grid-auto-rows: auto !important;
+    grid-auto-flow: row !important;
+
+    column-gap: 22px !important;
+    row-gap: 20px !important;
+
     margin: 0 0 48px !important;
-
-    column-gap: 28px !important;
-    row-gap: 0 !important;
-
-    align-items: stretch;
-}
-
-/* ==========================================
-   COLUMNA DE HORARIOS
-   ========================================== */
-
-.page-slug-schedule
-.wordcamp-schedule__time-slot-header {
-    margin: 0 !important;
-    padding: 24px 0 !important;
+    padding: 0 !important;
 
     background: transparent !important;
-    color: #606975 !important;
-
-    border: 0 !important;
-    border-top: 1px solid var(--agenda-line) !important;
+    border: none !important;
     border-radius: 0 !important;
+    box-shadow: none !important;
+}
 
+/* Ocultar horarios sin actividad */
+.page-slug-schedule
+.wordcamp-schedule__time-slot-header.is-empty {
+    display: none !important;
+}
+
+/* Horarios que sí tienen actividades */
+.page-slug-schedule
+.wordcamp-schedule.is-style-single-column-layout
+.wordcamp-schedule__time-slot-header.has-sessions {
+    display: flex !important;
+    align-items: flex-start;
+    justify-content: center;
+
+    grid-column: 1 !important;
+    grid-row: auto !important;
+
+    margin: 0 !important;
+    padding: 22px 8px !important;
+
+    background: #e9efff !important;
+    color: #175cd3 !important;
+
+    border: none !important;
+    border-radius: 14px !important;
     box-shadow: none !important;
 
-    font-size: 13px !important;
-    font-weight: 600 !important;
-    line-height: 1.5 !important;
-    letter-spacing: 0;
-
-    text-align: left !important;
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    line-height: 1.4 !important;
+    text-align: center !important;
     white-space: nowrap;
 }
 
-/* Horarios que contienen sesiones */
+/* Sesiones en la segunda columna */
 .page-slug-schedule
-.wordcamp-schedule__time-slot-header.has-sessions {
-    color: #171717 !important;
-    font-weight: 700 !important;
-}
+.wordcamp-schedule.is-style-single-column-layout
+.wordcamp-schedule__session {
+    grid-area: auto !important;
+    grid-column: 2 !important;
+    grid-row: auto !important;
 
-/* Horarios vacíos */
-.page-slug-schedule
-.wordcamp-schedule__time-slot-header.is-empty {
-    background: transparent !important;
-    color: #a0a6af !important;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 26px 30px !important;
+
+    background: #f0f5ff !important;
+    color: var(--cc-text) !important;
+
+    border: none !important;
+    border-left: 5px solid var(--cc-blue) !important;
+    border-radius: 16px !important;
+
+    box-shadow: none !important;
+    transform: none !important;
+
+    transition:
+        background-color .2s ease,
+        border-color .2s ease;
 }
 
 /* ==========================================
-   SESIONES
+   COLORES ALTERNADOS POR ACTIVIDAD
    ========================================== */
 
 .page-slug-schedule
-.wordcamp-schedule__session {
-    box-sizing: border-box;
-    min-width: 0;
-
-    margin: 0 !important;
-    padding: 22px 0 26px !important;
-
-    background: transparent !important;
-    background-image: none !important;
-
-    border: 0 !important;
-    border-top: 1px solid var(--agenda-line) !important;
-    border-radius: 0 !important;
-
-    box-shadow: none !important;
-    outline: none !important;
-
-    color: var(--agenda-text) !important;
-
-    transition: none !important;
+.wordcamp-schedule__session:nth-of-type(5n+2) {
+    background: #f2edff !important;
+    border-left-color: #7546d9 !important;
 }
 
-/* Hover discreto */
+.page-slug-schedule
+.wordcamp-schedule__session:nth-of-type(5n+3) {
+    background: #fff0f8 !important;
+    border-left-color: #e348a0 !important;
+}
+
+.page-slug-schedule
+.wordcamp-schedule__session:nth-of-type(5n+4) {
+    background: #fff5e8 !important;
+    border-left-color: #f39a32 !important;
+}
+
+.page-slug-schedule
+.wordcamp-schedule__session:nth-of-type(5n+5) {
+    background: #e9f9f6 !important;
+    border-left-color: #00a99d !important;
+}
+
+/* Efecto hover */
 .page-slug-schedule
 .wordcamp-schedule__session:hover {
-    background: transparent !important;
-    border-color: #c9ced6 !important;
-    box-shadow: none !important;
-    transform: none !important;
+    filter: saturate(1.12);
 }
 
 /* ==========================================
-   TÍTULOS DE SESIONES
+   TÍTULOS
    ========================================== */
 
 .page-slug-schedule
 .wordcamp-schedule__session-title {
-    margin: 0 0 10px !important;
+    margin: 0 0 12px !important;
     padding: 0 !important;
 
-    color: #171717 !important;
-
-    font-size: clamp(17px, 2vw, 21px) !important;
-    font-weight: 650 !important;
-    line-height: 1.45 !important;
-    letter-spacing: -0.025em;
-
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
+    color: #17233b !important;
+    font-size: clamp(18px, 2vw, 22px) !important;
+    font-weight: 750 !important;
+    line-height: 1.4 !important;
+    letter-spacing: -0.02em;
 }
 
-/* Enlaces de las sesiones */
 .page-slug-schedule
 .wordcamp-schedule__session-title a {
-    color: #171717 !important;
+    color: #17233b !important;
     font-size: inherit !important;
     font-weight: inherit !important;
     line-height: inherit !important;
-
     text-decoration: none !important;
-    box-shadow: none !important;
 }
 
 .page-slug-schedule
 .wordcamp-schedule__session-title a:hover {
-    color: var(--agenda-accent) !important;
+    color: #175cd3 !important;
     text-decoration: underline !important;
     text-underline-offset: 4px;
+}
+
+/* ==========================================
+   HORARIO DENTRO DE CADA ACTIVIDAD
+   ========================================== */
+
+.page-slug-schedule
+.wordcamp-schedule__session > p {
+    display: inline-block;
+
+    margin: 8px 0 12px !important;
+    padding: 7px 13px !important;
+
+    background: rgba(255,255,255,.75) !important;
+    color: #344563 !important;
+
+    border: 1px solid rgba(23,35,59,.08);
+    border-radius: 8px;
+
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    line-height: 1.5 !important;
 }
 
 /* ==========================================
@@ -1023,192 +1063,127 @@ body.wp-theme-campus-connect {
 
 .page-slug-schedule
 .wordcamp-schedule__session-speakers {
-    display: block;
-
     margin: 12px 0 0 !important;
-    padding: 0 !important;
+    padding: 14px 0 0 !important;
 
-    color: var(--agenda-muted) !important;
-
+    border-top: 1px solid rgba(23,35,59,.1) !important;
     background: transparent !important;
-    border: 0 !important;
 
+    color: #526078 !important;
     font-size: 14px !important;
-    font-weight: 400 !important;
     line-height: 1.6 !important;
 }
 
 .page-slug-schedule
-.wordcamp-schedule__session-speakers dt,
-.page-slug-schedule
 .wordcamp-schedule__session-speakers dd {
     margin: 0 !important;
-    padding: 0 !important;
-
-    color: var(--agenda-muted) !important;
-    font-size: 14px !important;
-    line-height: 1.6 !important;
+    color: #526078 !important;
 }
 
 .page-slug-schedule
 .wordcamp-schedule__session-speakers a {
-    color: #424b58 !important;
+    color: #175cd3 !important;
     font-size: inherit !important;
-    font-weight: 500 !important;
+    font-weight: 650 !important;
     text-decoration: none !important;
 }
 
 .page-slug-schedule
 .wordcamp-schedule__session-speakers a:hover {
-    color: var(--agenda-accent) !important;
     text-decoration: underline !important;
 }
 
 /* ==========================================
    FAVORITOS
-   Mantener funcionalidad original
    ========================================== */
 
 .page-slug-schedule
 .wordcamp-schedule .wcb-session-favourite-icon {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
     vertical-align: middle;
-
     margin-left: 10px;
-    padding: 0;
-
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
 }
 
 .page-slug-schedule
 .wordcamp-schedule .fav-session-button {
-    color: #8a929e !important;
+    color: #7546d9 !important;
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
-
-    text-decoration: none !important;
-    transition: color 0.15s ease;
-}
-
-.page-slug-schedule
-.wordcamp-schedule .fav-session-button:hover {
-    color: var(--agenda-accent) !important;
 }
 
 /* ==========================================
-   TEXTO Y CONTENIDO ADICIONAL
+   RESPONSIVE
    ========================================== */
 
-.page-slug-schedule
-.wordcamp-schedule__session p {
-    color: #5b6470;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-.page-slug-schedule
-.wordcamp-schedule__session a:focus-visible,
-.page-slug-schedule
-.wordcamp-schedule .fav-session-button:focus-visible {
-    outline: 2px solid var(--agenda-accent) !important;
-    outline-offset: 4px;
-}
-
-/* ==========================================
-   TABLETS
-   ========================================== */
-
-@media (max-width: 900px) {
+@media (max-width: 700px) {
 
     .page-slug-schedule
     .wp-block-wordcamp-schedule {
-        margin: 28px auto;
+        margin: 24px auto;
     }
 
     .page-slug-schedule
+    .wordcamp-schedule__date {
+        margin: 36px 0 20px !important;
+        padding: 20px !important;
+        font-size: 23px !important;
+        border-radius: 14px !important;
+    }
+
+    .page-slug-schedule
+    .wordcamp-schedule.is-style-single-column-layout
     .wordcamp-schedule__day {
-        column-gap: 18px !important;
+        grid-template-columns:
+            1fr !important;
+
+        column-gap: 0 !important;
+        row-gap: 0 !important;
+    }
+
+    .page-slug-schedule
+    .wordcamp-schedule.is-style-single-column-layout
+    .wordcamp-schedule__time-slot-header.has-sessions {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+
+        justify-content: flex-start;
+        width: fit-content;
+
+        margin: 12px 0 10px !important;
+        padding: 8px 14px !important;
+
+        font-size: 13px !important;
+        border-radius: 8px !important;
+    }
+
+    .page-slug-schedule
+    .wordcamp-schedule.is-style-single-column-layout
+    .wordcamp-schedule__session {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+
+        margin-bottom: 18px !important;
+        padding: 22px !important;
+
+        border-radius: 14px !important;
     }
 
     .page-slug-schedule
     .wordcamp-schedule__session-title {
         font-size: 18px !important;
     }
-}
-
-/* ==========================================
-   MÓVILES
-   ========================================== */
-
-@media (max-width: 600px) {
 
     .page-slug-schedule
-    .wp-block-wordcamp-schedule {
-        width: 100%;
-        margin: 20px auto;
-    }
-
-    .page-slug-schedule
-    .wordcamp-schedule__date {
-        margin: 38px 0 18px !important;
-        padding-bottom: 14px !important;
-        font-size: 25px !important;
-    }
-
-    .page-slug-schedule
-    .wordcamp-schedule__day {
-        column-gap: 12px !important;
-        row-gap: 0 !important;
-        margin-bottom: 36px !important;
-    }
-
-    .page-slug-schedule
-    .wordcamp-schedule__time-slot-header {
-        padding: 18px 0 !important;
-        font-size: 12px !important;
-        line-height: 1.4 !important;
-        white-space: normal;
-    }
-
-    .page-slug-schedule
-    .wordcamp-schedule__session {
-        padding: 17px 0 20px !important;
-    }
-
-    .page-slug-schedule
-    .wordcamp-schedule__session-title {
-        margin-bottom: 8px !important;
-        font-size: 16px !important;
-        line-height: 1.45 !important;
-    }
-
-    .page-slug-schedule
-    .wordcamp-schedule__session-speakers,
-    .page-slug-schedule
-    .wordcamp-schedule__session-speakers dt,
-    .page-slug-schedule
-    .wordcamp-schedule__session-speakers dd {
+    .wordcamp-schedule__session-speakers {
         font-size: 13px !important;
     }
 }
 
-/* ==========================================
-   ACCESIBILIDAD
-   ========================================== */
-
+/* Accesibilidad */
 @media (prefers-reduced-motion: reduce) {
     .page-slug-schedule
-    .wordcamp-schedule *,
-    .page-slug-schedule
-    .wordcamp-schedule *::before,
-    .page-slug-schedule
-    .wordcamp-schedule *::after {
+    .wordcamp-schedule__session {
         transition: none !important;
-        animation: none !important;
     }
 }
